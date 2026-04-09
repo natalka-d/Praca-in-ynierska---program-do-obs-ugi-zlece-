@@ -1,0 +1,244 @@
+/* ===== Ogólne ===== */
+body {
+    font-family: 'Open Sans', Calibri, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px 30px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/* ===== Nagłówek panelu ===== */
+.header-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-panel h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #2b6cb0;
+    margin: 0;
+}
+
+.header-panel a.logout-btn {
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #e3342f;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.header-panel a.logout-btn:hover {
+    background: #b22a24;
+}
+
+/* ===== Formularz filtrów ===== */
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.filter-form input,
+.filter-form select,
+.filter-form button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.filter-form button {
+    background-color: #2b6cb0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.filter-form button:hover {
+    background-color: #265a8c;
+}
+
+/* ===== Tabela w stylu kart ===== */
+.orders-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px; /* odstęp między wierszami */
+    font-size: 18px;
+}
+
+.orders-table thead th {
+    background-color: #2b3a70; /* granatowy */
+    color: #fff;
+    font-weight: 700;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 12px 12px 0 0;
+}
+
+.orders-table tbody tr {
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.orders-table tbody tr:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.orders-table td {
+    padding: 15px 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+/* Statusy */
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.status-done, 
+.status-progress, 
+.status-pending {
+    display: inline-flex;       /* Ustawienie w jednej linii */
+    align-items: center;        /* Wyrównanie pionowe do środka */
+    gap: 4px;                   /* Odstęp między emoji a tekstem */
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.status-done {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status-progress {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.status-pending {
+    background-color: #f44336;
+    color: #fff;
+}
+
+/* Akcje */
+.actions-cell a {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    margin: 4px 2px;
+    display: inline-block;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.actions-cell a:hover {
+    transform: translateY(-2px);
+}
+
+.button-view    { background: #2b6cb0; }
+.button-edit    { background: #2196f3; }
+.button-archive { background: #f44336; }
+
+/* ===== Paginacja ===== */
+.pagination {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 0 6px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #2b6cb0;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.pagination a:hover {
+    background: #cbd5e0;
+}
+
+/* ===== Komunikaty ===== */
+.message {
+    padding: 16px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.message.info { background: #d4edda; color: #155724; }
+.message.warning { background: #fff3cd; color: #856404; }
+
+/* ===== Przycisk filtrów i dodaj/archiwum ===== */
+.button.filter-toggle {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: #e83e8c;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button.filter-toggle:hover { background: #d63384; }
+
+.button.add-order { background: #2b6cb0; color: #fff; margin-right:10px; }
+.button.archive-order { background: #718096; color: #fff; }
+
+/* ===== Responsywność ===== */
+@media (max-width: 900px) {
+    .filter-form { flex-direction: column; }
+    .orders-table thead { display: none; }
+    .orders-table tbody tr { display: block; margin-bottom: 20px; }
+    .orders-table  tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 15px;
+        text-align: left;
+    }
+    .orders-table tbody td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: #2b6cb0;
+    }
+}
